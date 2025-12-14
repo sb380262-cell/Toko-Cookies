@@ -11,7 +11,7 @@ html { scroll-behavior: smooth; }
 body {
     font-family: Poppins, Arial, sans-serif;
     margin: 0;
-    background: url("https://raw.githubusercontent.com/sb380262-cell/Toko-Cookies-assets/main/backgroundcc.jpg") center/cover no-repeat;
+    background: url("images/backgroundcc.jpg") center/cover no-repeat;
     color: #4e342e;
 }
 
@@ -63,7 +63,8 @@ nav a {
     flex-wrap: wrap;
 }
 
-.gallery img {
+.gallery img,
+.product img {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -94,13 +95,6 @@ nav a {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,.1);
-}
-
-.product img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
 }
 
 /* FORM */
@@ -157,10 +151,10 @@ button:hover {
 <section id="galeri">
 <h2 style="text-align:center;">Galeri Cookies</h2>
 <div class="gallery">
-<img src="https://raw.githubusercontent.com/sb380262-cell/Toko-Cookies-assets/main/cookies.jpg">
-<img src="https://raw.githubusercontent.com/sb380262-cell/Toko-Cookies-assets/main/red.jpg">
-<img src="https://raw.githubusercontent.com/sb380262-cell/Toko-Cookies-assets/main/oreo.jpg">
-<img src="https://raw.githubusercontent.com/sb380262-cell/Toko-Cookies-assets/main/boom.jpg">
+<img src="images/cookies.jpg">
+<img src="images/red.jpg">
+<img src="images/oreo.jpg">
+<img src="images/boom.jpg">
 </div>
 </section>
 
@@ -169,14 +163,14 @@ button:hover {
 <div class="product-grid">
 
 <div class="product">
-<img src="https://raw.githubusercontent.com/sb380262-cell/Toko-Cookies-assets/main/cookies.jpg">
+<img src="images/cookies.jpg">
 <h3>Choco Chip</h3>
 <p>Rp 45.000</p>
 <button onclick="beli('Choco Chip',45000)">Beli</button>
 </div>
 
 <div class="product">
-<img src="https://raw.githubusercontent.com/sb380262-cell/Toko-Cookies-assets/main/red.jpg">
+<img src="images/red.jpg">
 <h3>Red Velvet</h3>
 <p>Rp 55.000</p>
 <button onclick="beli('Red Velvet',55000)">Beli</button>
@@ -188,10 +182,10 @@ button:hover {
 <section id="kontak" style="text-align:center;">
 <h2>Kontak Kami</h2>
 <div class="contact-form">
-<input id="nama" placeholder="Nama">
-<input id="email" placeholder="Email">
-<textarea id="pesan" placeholder="Pesan"></textarea>
-<button onclick="kirimPesan()">Kirim</button>
+<input placeholder="Nama">
+<input placeholder="Email">
+<textarea placeholder="Pesan"></textarea>
+<button onclick="alert('Pesan terkirim!')">Kirim</button>
 </div>
 </section>
 
@@ -202,10 +196,6 @@ button:hover {
 </section>
 
 <script>
-function kirimPesan(){
-    alert("Pesan terkirim! Terima kasih 😊");
-}
-
 function beli(nama,harga){
     document.querySelectorAll("section,header").forEach(e=>e.style.display="none");
     document.getElementById("halaman-pesanan").style.display="block";
@@ -216,4 +206,3 @@ function beli(nama,harga){
 
 </body>
 </html>
-
